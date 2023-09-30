@@ -27,13 +27,13 @@ public class LoginController {
 
     @RequestMapping("/login")
     public String login(Model model) {
-        model.addAttribute("title", "Login Page");
+        model.addAttribute("title", "Login");
         return "login";
     }
 
     @RequestMapping("/index")
     public String index(Model model) {
-        model.addAttribute("title", "Home Page");
+        model.addAttribute("title", "Home");
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (authentication == null || authentication instanceof AnonymousAuthenticationToken) {
             return "redirect:/login";
